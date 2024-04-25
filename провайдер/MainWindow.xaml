@@ -1,0 +1,18 @@
+﻿<Window x:Class="провайдер.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:провайдер"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280" WindowStyle="ThreeDBorderWindow" Background="#4771d0">
+    <Grid Background="#FF4771D0" Height="707" Width="1288">
+        <Rectangle Fill="White" Margin="255,134,133,133" />
+        <Rectangle Fill="#d04771" Margin="135,134,1013,133" />
+        <Button x:Name="Войти" Content="Войти" Margin="602,464,443,168" Click="Button_Click" Background="#FFD04771" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" BorderBrush="#FF8B8B8B"/>
+        <TextBox x:Name="Логин" Text="Логин" TextWrapping="Wrap" Margin="400,269,248,383" Background="#FF898989" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" GotFocus="логин_GotFocus"/>
+        <TextBox x:Name="Пароль" Text="Пароль" TextWrapping="Wrap" Margin="399,369,248,283" Background="#FF898989" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" GotFocus="Пароль_GotFocus"/>
+        <Label Content="Личный кабинет" Margin="600,174,448,483" RenderTransformOrigin="0.4,0.572" FontSize="28
+               " FontFamily="Arial Rounded MT Bold" Foreground="Black"/>
+    </Grid>
+</Window>

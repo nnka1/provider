@@ -1,0 +1,57 @@
+﻿<Window x:Class="провайдер.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:провайдер"
+        mc:Ignorable="d"
+        Title="Window2"  Height="720" Width="1280">
+    <Grid Background="#FF4771D0" Height="707" Width="1288">
+        <DataGrid x:Name="dataGrid" Margin="190,109,188,323" AutoGenerateColumns="False" Background="#FF4771D0" BorderBrush="#FF4771D0" BorderThickness="1" >
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Background" Value="#FF898989"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#FF8B8B8B"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                </Style>
+            </DataGrid.CellStyle>
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#d04771"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="FontFamily" Value="Arial Rounded MT Bold"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер тарифа" Binding="{Binding id_тарифа}" />
+                <DataGridTextColumn Header="Тариф" Binding="{Binding Тариф}" />
+                <DataGridTextColumn Header="Скорость" Binding="{Binding Скорость_соединения, StringFormat={}{0} мб/c}" />
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Стоимость, StringFormat={}{0} рублей}" />
+            </DataGrid.Columns>
+
+
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#FFD04771"/>
+                            <Setter Property="Foreground" Value="#FF4771D0"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
+        <Button x:Name="Добавить" Content="Добавить" Margin="192,414,853,243" Click="Добавить_Click" Background="#FFD04771" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" BorderBrush="#FF8B8B8B"/>
+        <Button x:Name="Изменить" Content="Изменить" Margin="520,414,525,243" Click="Изменить_Click" Background="#FFD04771" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" BorderBrush="#FF8B8B8B"/>
+        <Button x:Name="Удалить" Content="Удалить" Margin="855,414,190,243" Click="Удалить_Click" Background="#FFD04771" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" BorderBrush="#FF8B8B8B"/>
+        <Button x:Name="Найти" Content="Найти" Margin="950,59,188,608" Click="Поиск1_Click" Background="#FFD04771" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" BorderBrush="#FF8B8B8B"/>
+        <TextBox x:Name="Поиск" TextWrapping="Wrap" Text="" Margin="195,59,353,609" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="Gray" />
+        <Button x:Name="Назад" Content="Назад" Margin="75,564,970,73" Background="#FFD04771" FontSize="26" FontFamily="Arial Rounded MT Bold" Foreground="White" BorderBrush="#FF8B8B8B" Click="Назад_Click"/>
+
+    </Grid>
+</Window>
