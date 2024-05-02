@@ -200,7 +200,7 @@ namespace провайдер
             {
                 connection.Open();
 
-                string searchQuery = "SELECT * FROM \"Тарифы\" WHERE CAST(id AS TEXT) LIKE @searchText OR \"Тариф\" LIKE @searchText OR CAST(\"Стоимость\" AS TEXT) LIKE @searchText OR CAST(\"Скорость_соединения\" AS TEXT) LIKE @searchText";
+                string searchQuery = "SELECT * FROM \"Тарифы\" WHERE CAST(id_тарифа AS TEXT) LIKE @searchText OR \"Тариф\" LIKE @searchText OR CAST(\"Стоимость\" AS TEXT) LIKE @searchText OR CAST(\"Скорость_соединения\" AS TEXT) LIKE @searchText";
 
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(searchQuery, connection))
                 {

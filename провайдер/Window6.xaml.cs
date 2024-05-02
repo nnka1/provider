@@ -233,9 +233,9 @@ namespace провайдер
                 // Добавить таблицу для отображения информации о тарифах
                 PdfPTable table = new PdfPTable(4);
                 table.AddCell(new Phrase("Тариф", font));
-                table.AddCell(new Phrase("Стоимость", font));
+                table.AddCell(new Phrase("Стоимость (руб.)", font));
                 table.AddCell(new Phrase("Количество продаж", font));
-                table.AddCell(new Phrase("Общий доход", font));
+                table.AddCell(new Phrase("Общий доход (руб.)", font));
                 
 
                 // Пройтись по тарифам и добавить их в таблицу
@@ -313,7 +313,7 @@ namespace провайдер
                 table.AddCell(new Phrase("Оборудование", font));
                 table.AddCell(new Phrase("Дата начала", font));
                 table.AddCell(new Phrase("Дата окончания", font));
-                table.AddCell(new Phrase("Стоимость", font));
+                table.AddCell(new Phrase("Стоимость (руб.)", font));
                 using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
                 {
                     connection.Open();

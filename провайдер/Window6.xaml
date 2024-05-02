@@ -34,8 +34,8 @@
 
 
                 <DataGridTextColumn Header="Транзация" Binding="{Binding Тип_транзакции}" />
-                <DataGridTextColumn Header="Сумма" Binding="{Binding Сумма}" />
-                <DataGridTextColumn Header="Дата" Binding="{Binding Дата, StringFormat=\{0:dd/MM/yyyy\}}" />
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Сумма, StringFormat={}{0} рублей}" />
+                    <DataGridTextColumn Header="Дата" Binding="{Binding Дата, StringFormat=\{0:dd/MM/yyyy\}}" />
                 <DataGridTextColumn Header="Дата начала аренды" Binding="{Binding Дата_начала_аренды, StringFormat=\{0:dd/MM/yyyy\}}" />
                 <DataGridTextColumn Header="Дата окончания" Binding="{Binding Дата_окончания_аренды, StringFormat=\{0:dd/MM/yyyy\}}" />
             </DataGrid.Columns>
